@@ -27,8 +27,10 @@ fg = folium.FeatureGroup(name="My Map")
 
 for lt, ln, el, nam in zip(lat, lon, elev, name):
     iframe = folium.IFrame(html=html % (nam, nam, el), width=200, height=100)
-    map.add_child(folium.Marker(location=[lt, ln], popup=folium.Popup(iframe), icon=folium.Icon(color=color_producer(el))))
+    map.add_child(folium.CircleMarker(location=[lt, ln], radius=6, popup=folium.Popup(iframe),
+    fill_color=color_producer(el), color='grey', fill_opacity=0.7))
+
+fg.add_child(folium.GeoJson(data=open('world.json', 'r', encoding='utf-8-sig').read()))
 
 map.add_child(fg)
-
 map.save("Map1.html")
