@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_975586f1e840fb6a569530d47a069a74 {
+                #map_831af250f068d7dcb1dabd57cfd60246 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_975586f1e840fb6a569530d47a069a74" ></div>
+            <div class="folium-map" id="map_831af250f068d7dcb1dabd57cfd60246" ></div>
         
 </body>
 <script>
     
     
-            var map_975586f1e840fb6a569530d47a069a74 = L.map(
-                "map_975586f1e840fb6a569530d47a069a74",
+            var map_831af250f068d7dcb1dabd57cfd60246 = L.map(
+                "map_831af250f068d7dcb1dabd57cfd60246",
                 {
                     center: [38.58, -99.09],
                     crs: L.CRS.EPSG3857,
@@ -60,13 +60,48 @@
 
         
     
-            var tile_layer_e4c12bd4b2b0879736c4005ac0d4b9ae = L.tileLayer(
-                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            var tile_layer_6d57b6081c5ad5366db5ce5f9d6abeb5 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
             );
         
     
-            tile_layer_e4c12bd4b2b0879736c4005ac0d4b9ae.addTo(map_975586f1e840fb6a569530d47a069a74);
+            tile_layer_6d57b6081c5ad5366db5ce5f9d6abeb5.addTo(map_831af250f068d7dcb1dabd57cfd60246);
+        
+    
+            var marker_a25fcef18e414afd0ebd2be81b016518 = L.marker(
+                [38.2, -99.1],
+                {}
+            ).addTo(map_831af250f068d7dcb1dabd57cfd60246);
+        
+    
+            var icon_e3946089b7d60c32622b7e1866f017aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a25fcef18e414afd0ebd2be81b016518.setIcon(icon_e3946089b7d60c32622b7e1866f017aa);
+        
+    
+        var popup_71f5134a4e6a627c21f2a1d18faf49de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5833a6fb38964f62c03970692c1a9f86 = $(`<div id="html_5833a6fb38964f62c03970692c1a9f86" style="width: 100.0%; height: 100.0%;">Hi I am a Marker</div>`)[0];
+                popup_71f5134a4e6a627c21f2a1d18faf49de.setContent(html_5833a6fb38964f62c03970692c1a9f86);
+            
+        
+
+        marker_a25fcef18e414afd0ebd2be81b016518.bindPopup(popup_71f5134a4e6a627c21f2a1d18faf49de)
+        ;
+
+        
+    
+    
+            var feature_group_17d67ba51c9a6456f35af64645616f93 = L.featureGroup(
+                {}
+            );
+        
+    
+            feature_group_17d67ba51c9a6456f35af64645616f93.addTo(map_831af250f068d7dcb1dabd57cfd60246);
         
 </script>
 </html>
